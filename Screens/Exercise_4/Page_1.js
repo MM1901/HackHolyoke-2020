@@ -5,16 +5,14 @@ import { StyleSheet, Text, View, SafeAreaView, TextInput, Alert } from 'react-na
 import { Icon } from 'react-native-elements';
 import styles from './Exercise.style';
 
-const bgColor = "#eecc55";
+const bgColor = "#88aaff";
 
 function Page_1(props) {
-    const [text, setText] = useState('');
     return (
         <SafeAreaView style={styles.container} >
-            <Text style={styles.bigText}>What is something you are proud of yourself for today?</Text>
-            <TextInput style={styles.input} onChangeText={text => setText(text)} placeholder="I got..." />
+            <Text style={styles.bigText}>So glad you are calm. Why don't you close your eyes, sit, and let thoughts pass through, and when you're ready to get to your day, you can continue.</Text>
             <View style={styles.centerer}>
-                <Icon raised name='arrow-forward' color={bgColor} size={50} onPress={() => props.navigation.navigate('Page_2', { text: text, index: 0 })} />
+                <Icon raised name='arrow-forward' color={bgColor} size={50} onPress={() => props.navigation.navigate('Page_2')} />
             </View>
         </SafeAreaView>
     );

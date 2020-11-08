@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, SafeAreaView, TextInput, Alert } from 'react-na
 import { Icon } from 'react-native-elements';
 import styles from './Exercise.style';
 
-const bgColor = "#eecc55";
+const bgColor = "#ff90aa";
 
 function Page_3(props) {
     React.useEffect(() => {
@@ -16,7 +16,7 @@ function Page_3(props) {
     }, [])
     return (
         <SafeAreaView style={styles.container}>
-            <Text style={styles.bigText}>Well Done!</Text>
+            <Text style={styles.bigText}>Well done!</Text>
         </SafeAreaView>
     );
 }
