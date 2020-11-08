@@ -8,13 +8,13 @@ import {
   Text,
   View,
 } from "react-native";
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import Exercise_1 from './Exercise_1/Exercise';
-import Exercise_2 from './Exercise_2/Exercise';
-import Exercise_3 from './Exercise_3/Exercise';
-import Exercise_4 from './Exercise_4/Exercise';
-import Exercise_5 from './Exercise_5/Exercise';
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import Exercise_1 from "./Exercise_1/Exercise";
+import Exercise_2 from "./Exercise_2/Exercise";
+import Exercise_3 from "./Exercise_3/Exercise";
+import Exercise_4 from "./Exercise_4/Exercise";
+import Exercise_5 from "./Exercise_5/Exercise";
 
 //messages that will be displayed at the top on the screen in the topContainer
 const intro_messages = {
@@ -30,18 +30,30 @@ const intro_messages = {
     "“Confidence is what we get when we take fear, face it and replace it.” ― Tim Fargo",
 };
 
-function NavigationScreen(props) {
-  return (
-    <View style={styles.containter}>
-      <View style={styles.topContainer}>
-        <Text style={styles.topText}> {intro_messages[props.mood]} </Text>
-        <Text style={styles.bottomText}>
-          Click an Activity Below to Get Started!
-        </Text>
+export default class NavigationScreen extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  render() {
+    const { state } = this.props.navigation;
+    return (
+      <View style={styles.containter}>
+        <View style={styles.topContainer}>
+          <Text style={styles.topText}>
+            {" "}
+            {intro_messages[state.params.mood]}{" "}
+          </Text>
+          <Text style={styles.bottomText}>
+            Click an Activity Below to Get Started!
+          </Text>
+        </View>
+        <View style={styles.bottomContainer}>
+          {display_mood(state.params.mood)}
+        </View>
       </View>
-      <View style={styles.bottomContainer}>{display_mood(props.mood)}</View>
-    </View>
-  );
+    );
+  }
 }
 
 const Stack = createStackNavigator();
@@ -101,7 +113,11 @@ function display_mood(mood) {
 function Joyful(props) {
   return (
     <View>
-      <Button color="#a955ee" title="Promoting Happiness" onPress={() => props.navigation.navigate('Exercise_1')} />
+      <Button
+        color="#a955ee"
+        title="Promoting Happiness"
+        onPress={() => props.navigation.navigate("Exercise_1")}
+      />
       <Button color="#a955ee" title="Activity #2" />
       <Button color="#a955ee" title="Activity #3" />
     </View>
@@ -110,7 +126,11 @@ function Joyful(props) {
 function Dejected(props) {
   return (
     <View>
-      <Button color="#a955ee" title="Recognizing Sadness" onPress={() => props.navigation.navigate('Exercise_1')} />
+      <Button
+        color="#a955ee"
+        title="Recognizing Sadness"
+        onPress={() => props.navigation.navigate("Exercise_1")}
+      />
       <Button color="#a955ee" title="Activity #2" />
       <Button color="#a955ee" title="Activity #3" />
     </View>
@@ -119,7 +139,11 @@ function Dejected(props) {
 function Serene(props) {
   return (
     <View>
-      <Button color="#a955ee" title="Embracing Calm" onPress={() => props.navigation.navigate('Exercise_1')} />
+      <Button
+        color="#a955ee"
+        title="Embracing Calm"
+        onPress={() => props.navigation.navigate("Exercise_1")}
+      />
       <Button color="#a955ee" title="Activity #2" />
       <Button color="#a955ee" title="Activity #3" />
     </View>
@@ -128,7 +152,11 @@ function Serene(props) {
 function Aggrieved(props) {
   return (
     <View>
-      <Button color="#a955ee" title="Accepting Anger" onPress={() => props.navigation.navigate('Exercise_1')} />
+      <Button
+        color="#a955ee"
+        title="Accepting Anger"
+        onPress={() => props.navigation.navigate("Exercise_1")}
+      />
       <Button color="#a955ee" title="Activity #2" />
       <Button color="#a955ee" title="Activity #3" />
     </View>
@@ -137,7 +165,11 @@ function Aggrieved(props) {
 function Apprehensive(props) {
   return (
     <View>
-      <Button color="#a955ee" title="Calming Apprehension" onPress={() => props.navigation.navigate('Exercise_1')} />
+      <Button
+        color="#a955ee"
+        title="Calming Apprehension"
+        onPress={() => props.navigation.navigate("Exercise_1")}
+      />
       <Button color="#a955ee" title="Activity #2" />
       <Button color="#a955ee" title="Activity #3" />
     </View>
@@ -174,5 +206,3 @@ const styles = StyleSheet.create({
     marginTop: 50,
   },
 });
-
-export default NavigationScreen;

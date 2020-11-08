@@ -20,7 +20,7 @@ export default class MoodSlider extends Component {
   }
 
   render() {
-    const { navigate, state } = this.props.navigation;
+    const { navigate } = this.props.navigation;
     return (
       <ImageBackground
         source={require("../assets/Background.jpg")}
@@ -37,7 +37,7 @@ export default class MoodSlider extends Component {
             <TouchableOpacity
               style={styles.button}
               onPress={() => {
-                navigate("MainMenu", { mood: "Happy" });
+                navigate("MainMenu", { mood: "Joyful" });
               }}
             >
               <Image
