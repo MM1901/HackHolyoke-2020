@@ -10,7 +10,7 @@ function Page_2(props) {
     React.useEffect(() => {
         let timer = setTimeout(() => {
             for (let i = 0; i < 2; ++i) {
-                navigation.dispatch({ type: 'Navigation/BACK' });
+                props.navigation.goBack(null);
             }
         }, 1200);
     }, [])
