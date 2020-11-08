@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   Dimensions,
   Button,
+  Text,
 } from "react-native";
 import React, { Component } from "react";
 
@@ -33,6 +34,9 @@ export default class HomeScreen extends React.Component {
             style={styles.picture}
           />
         </TouchableOpacity>
+        <Text style={styles.texts}>
+          Tap on the image to choose your mood for the day
+        </Text>
       </View>
     );
   }
@@ -48,5 +52,10 @@ const styles = StyleSheet.create({
     height: height / 2,
     top: 125,
     right: 5,
+  },
+  texts: {
+    top: 180,
+    textAlign: "center",
+    fontStyle: "italic",
   },
 });

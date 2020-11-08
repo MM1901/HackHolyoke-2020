@@ -65,7 +65,7 @@ function display_mood(mood) {
       return (
         <NavigationContainer>
           <Stack.Navigator>
-            <Stack.Screen name="nav" component={Joyful} />
+            <Stack.Screen name="Suggested Activities" component={Joyful} />
             <Stack.Screen name="Exercise_1" component={Exercise_1} />
           </Stack.Navigator>
         </NavigationContainer>
@@ -74,7 +74,7 @@ function display_mood(mood) {
       return (
         <NavigationContainer>
           <Stack.Navigator>
-            <Stack.Screen name="nav" component={Dejected} />
+            <Stack.Screen name="Suggested Activities" component={Dejected} />
             <Stack.Screen name="Exercise_1" component={Exercise_2} />
           </Stack.Navigator>
         </NavigationContainer>
@@ -83,7 +83,7 @@ function display_mood(mood) {
       return (
         <NavigationContainer>
           <Stack.Navigator>
-            <Stack.Screen name="nav" component={Serene} />
+            <Stack.Screen name="Suggested Activities" component={Serene} />
             <Stack.Screen name="Exercise_1" component={Exercise_4} />
           </Stack.Navigator>
         </NavigationContainer>
@@ -92,7 +92,7 @@ function display_mood(mood) {
       return (
         <NavigationContainer>
           <Stack.Navigator>
-            <Stack.Screen name="nav" component={Aggrieved} />
+            <Stack.Screen name="Suggested Activities" component={Aggrieved} />
             <Stack.Screen name="Exercise_1" component={Exercise_3} />
           </Stack.Navigator>
         </NavigationContainer>
@@ -101,7 +101,10 @@ function display_mood(mood) {
       return (
         <NavigationContainer>
           <Stack.Navigator>
-            <Stack.Screen name="nav" component={Apprehensive} />
+            <Stack.Screen
+              name="Suggested Activities"
+              component={Apprehensive}
+            />
             <Stack.Screen name="Exercise_1" component={Exercise_5} />
           </Stack.Navigator>
         </NavigationContainer>
@@ -118,8 +121,16 @@ function Joyful(props) {
         title="Promoting Happiness"
         onPress={() => props.navigation.navigate("Exercise_1")}
       />
-      <Button color="#a955ee" title="Activity #2" />
-      <Button color="#a955ee" title="Activity #3" />
+      <Button
+        color="#a955ee"
+        title="Activity #2"
+        onPress={() => props.navigation.navigate("Exercise_2")}
+      />
+      <Button
+        color="#a955ee"
+        title="Activity #3"
+        onPress={() => props.navigation.navigate("Exercise_3")}
+      />
     </View>
   );
 }
@@ -131,8 +142,16 @@ function Dejected(props) {
         title="Recognizing Sadness"
         onPress={() => props.navigation.navigate("Exercise_1")}
       />
-      <Button color="#a955ee" title="Activity #2" />
-      <Button color="#a955ee" title="Activity #3" />
+      <Button
+        color="#a955ee"
+        title="Activity #2"
+        onPress={() => props.navigation.navigate("Exercise_2")}
+      />
+      <Button
+        color="#a955ee"
+        title="Activity #3"
+        onPress={() => props.navigation.navigate("Exercise_3")}
+      />
     </View>
   );
 }
@@ -144,8 +163,16 @@ function Serene(props) {
         title="Embracing Calm"
         onPress={() => props.navigation.navigate("Exercise_1")}
       />
-      <Button color="#a955ee" title="Activity #2" />
-      <Button color="#a955ee" title="Activity #3" />
+      <Button
+        color="#a955ee"
+        title="Activity #2"
+        onPress={() => props.navigation.navigate("Exercise_2")}
+      />
+      <Button
+        color="#a955ee"
+        title="Activity #3"
+        onPress={() => props.navigation.navigate("Exercise_3")}
+      />
     </View>
   );
 }
@@ -157,8 +184,16 @@ function Aggrieved(props) {
         title="Accepting Anger"
         onPress={() => props.navigation.navigate("Exercise_1")}
       />
-      <Button color="#a955ee" title="Activity #2" />
-      <Button color="#a955ee" title="Activity #3" />
+      <Button
+        color="#a955ee"
+        title="Activity #2"
+        onPress={() => props.navigation.navigate("Exercise_2")}
+      />
+      <Button
+        color="#a955ee"
+        title="Activity #3"
+        onPress={() => props.navigation.navigate("Exercise_3")}
+      />
     </View>
   );
 }
@@ -170,8 +205,16 @@ function Apprehensive(props) {
         title="Calming Apprehension"
         onPress={() => props.navigation.navigate("Exercise_1")}
       />
-      <Button color="#a955ee" title="Activity #2" />
-      <Button color="#a955ee" title="Activity #3" />
+      <Button
+        color="#a955ee"
+        title="Activity #2"
+        onPress={() => props.navigation.navigate("Exercise_2")}
+      />
+      <Button
+        color="#a955ee"
+        title="Activity #3"
+        onPress={() => props.navigation.navigate("Exercise_3")}
+      />
     </View>
   );
 }
