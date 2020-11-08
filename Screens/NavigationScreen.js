@@ -19,7 +19,7 @@ import Exercise_5 from "./Exercise_5/Exercise";
 //messages that will be displayed at the top on the screen in the topContainer
 const intro_messages = {
   Joyful:
-    "“When you are joyful, when you say yes to life and have fun and project positivity all around you, you become a sun in the center of every constellation, and people want to be near you.” ― Shannon L. Alder",
+    "“No medicine cures what happiness cannot.” ― Gabriel García Márquez",
   Dejected:
     "“We are sometimes dragged into a pit of unhappiness by someone else’s opinion that we do not look happy.” ― Mokokoma Mokhonoana",
   Serene:
@@ -42,9 +42,6 @@ export default class NavigationScreen extends React.Component {
         <Text style={styles.topText}>
           {" "}
           {intro_messages[state.params.mood]}{" "}
-        </Text>
-        <Text style={styles.bottomText}>
-          Click an Activity Below to Get Started!
         </Text>
         {display_mood(state.params.mood)}
       </View>
@@ -176,11 +173,12 @@ function Apprehensive(props) {
 const styles = StyleSheet.create({
   containter: {
     flex: 1,
-    backgroundColor: "#eecc55",
+    backgroundColor: "#ffdd66",
   },
   topContainer: {
-    backgroundColor: "#eecc55",
+    backgroundColor: "#ffdd88",
     flex: 3,
+    padding: 5,
     justifyContent: "flex-end",
     alignItems: "center",
     marginBottom: 10,
@@ -194,6 +192,7 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 20,
     textAlign: "center",
+    padding: 15,
   },
   bottomText: {
     color: "black",
