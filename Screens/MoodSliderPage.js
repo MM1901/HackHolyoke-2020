@@ -7,6 +7,7 @@ import {
   Image,
   Dimensions,
   TouchableOpacity,
+  ImageBackground,
 } from "react-native";
 import Swiper from "react-native-swiper";
 
@@ -20,47 +21,43 @@ export default class MoodSlider extends Component {
 
   render() {
     return (
-      <Image
-        source={require("../assets/I am feeling image.jpg")}
+      <ImageBackground
+        source={require("../assets/Background.jpg")}
         style={styles.container}
       >
-        <View style={styles.container}>
-          <StatusBar hidden={true} />
-          <Swiper>
-            <View style={styles.slide}>
+        <StatusBar hidden={true} />
+        <Swiper>
+          <View style={styles.slide}>
+            <Text style={styles.texts}> I am feeling...</Text>
+            <Image
+              source={require("../assets/Happy.png")}
+              style={styles.image}
+            />
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => {
+                alert("you clicked me");
+              }}
+            >
               <Image
-                source={require("../assets/Happy.png")}
-                style={styles.image}
+                source={require("../assets/Joyful2.jpg")}
+                style={styles.titles}
               />
-              <TouchableOpacity
-                style={styles.button}
-                onPress={() => {
-                  alert("you clicked me");
-                }}
-              >
-                <Image
-                  source={require("../assets/Joyful2.jpg")}
-                  style={styles.titles}
-                />
-              </TouchableOpacity>
-            </View>
+            </TouchableOpacity>
+          </View>
 
-            <View style={styles.slide}>
-              <Image
-                source={require("../assets/Sad.png")}
-                style={styles.image}
-              />
-            </View>
+          <View style={styles.slide}>
+            <Image source={require("../assets/Sad.png")} style={styles.image} />
+          </View>
 
-            <View style={styles.slide}>
-              <Image
-                source={require("../assets/Down.png")}
-                style={styles.image}
-              />
-            </View>
-          </Swiper>
-        </View>
-      </Image>
+          <View style={styles.slide}>
+            <Image
+              source={require("../assets/Down.png")}
+              style={styles.image}
+            />
+          </View>
+        </Swiper>
+      </ImageBackground>
     );
   }
 }
@@ -71,11 +68,11 @@ const styles = StyleSheet.create({
   },
 
   image: {
-    paddingTop: 40,
+    paddingTop: 30,
     width: width,
     height: height / 2,
     justifyContent: "center",
-    top: 70,
+    top: 30,
   },
 
   slide: {
@@ -86,10 +83,19 @@ const styles = StyleSheet.create({
 
   titles: {
     width: width / 2,
-    height: height / 5,
+    height: height / 8,
+    backgroundColor: "#FAE2E2",
+    borderRadius: 20,
   },
 
   button: {
-    top: 75,
+    top: 40,
+  },
+
+  texts: {
+    fontStyle: "italic",
+    fontSize: 48,
+    marginTop: 0,
+    marginLeft: -70,
   },
 });
