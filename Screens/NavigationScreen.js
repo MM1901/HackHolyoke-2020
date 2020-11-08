@@ -18,8 +18,7 @@ import Exercise_5 from "./Exercise_5/Exercise";
 
 //messages that will be displayed at the top on the screen in the topContainer
 const intro_messages = {
-  Joyful:
-    "“No medicine cures what happiness cannot.” ― Gabriel García Márquez",
+  Joyful: "“No medicine cures what happiness cannot.” ― Gabriel García Márquez",
   Dejected:
     "“We are sometimes dragged into a pit of unhappiness by someone else’s opinion that we do not look happy.” ― Mokokoma Mokhonoana",
   Serene:
@@ -57,8 +56,6 @@ function display_mood(mood) {
     case "Joyful":
       return (
         <NavigationContainer>
-          <Stack.Navigator>
-            <Stack.Screen name="Suggested Activities" component={Joyful} />
           <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="nav" component={Joyful} />
             <Stack.Screen name="Exercise_1" component={Exercise_1} />
@@ -68,8 +65,6 @@ function display_mood(mood) {
     case "Dejected":
       return (
         <NavigationContainer>
-          <Stack.Navigator>
-            <Stack.Screen name="Suggested Activities" component={Dejected} />
           <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="nav" component={Dejected} />
             <Stack.Screen name="Exercise_1" component={Exercise_2} />
@@ -79,8 +74,6 @@ function display_mood(mood) {
     case "Serene":
       return (
         <NavigationContainer>
-          <Stack.Navigator>
-            <Stack.Screen name="Suggested Activities" component={Serene} />
           <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="nav" component={Serene} />
             <Stack.Screen name="Exercise_1" component={Exercise_4} />
@@ -90,8 +83,6 @@ function display_mood(mood) {
     case "Aggrieved":
       return (
         <NavigationContainer>
-          <Stack.Navigator>
-            <Stack.Screen name="Suggested Activities" component={Aggrieved} />
           <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="nav" component={Aggrieved} />
             <Stack.Screen name="Exercise_1" component={Exercise_3} />
@@ -101,11 +92,6 @@ function display_mood(mood) {
     case "Apprehensive":
       return (
         <NavigationContainer>
-          <Stack.Navigator>
-            <Stack.Screen
-              name="Suggested Activities"
-              component={Apprehensive}
-            />
           <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="nav" component={Apprehensive} />
             <Stack.Screen name="Exercise_1" component={Exercise_5} />
@@ -124,16 +110,8 @@ function Joyful(props) {
         title="Promoting Happiness"
         onPress={() => props.navigation.navigate("Exercise_1")}
       />
-      <Button
-        color="#a955ee"
-        title="Activity #2"
-        onPress={() => props.navigation.navigate("Exercise_2")}
-      />
-      <Button
-        color="#a955ee"
-        title="Activity #3"
-        onPress={() => props.navigation.navigate("Exercise_3")}
-      />
+      <Button color="#a955ee" title="Activity #2" />
+      <Button color="#a955ee" title="Activity #3" />
     </View>
   );
 }
@@ -145,16 +123,8 @@ function Dejected(props) {
         title="Recognizing Sadness"
         onPress={() => props.navigation.navigate("Exercise_1")}
       />
-      <Button
-        color="#a955ee"
-        title="Activity #2"
-        onPress={() => props.navigation.navigate("Exercise_2")}
-      />
-      <Button
-        color="#a955ee"
-        title="Activity #3"
-        onPress={() => props.navigation.navigate("Exercise_3")}
-      />
+      <Button color="#a955ee" title="Activity #2" />
+      <Button color="#a955ee" title="Activity #3" />
     </View>
   );
 }
@@ -166,16 +136,8 @@ function Serene(props) {
         title="Embracing Calm"
         onPress={() => props.navigation.navigate("Exercise_1")}
       />
-      <Button
-        color="#a955ee"
-        title="Activity #2"
-        onPress={() => props.navigation.navigate("Exercise_2")}
-      />
-      <Button
-        color="#a955ee"
-        title="Activity #3"
-        onPress={() => props.navigation.navigate("Exercise_3")}
-      />
+      <Button color="#a955ee" title="Activity #2" />
+      <Button color="#a955ee" title="Activity #3" />
     </View>
   );
 }
@@ -187,16 +149,8 @@ function Aggrieved(props) {
         title="Accepting Anger"
         onPress={() => props.navigation.navigate("Exercise_1")}
       />
-      <Button
-        color="#a955ee"
-        title="Activity #2"
-        onPress={() => props.navigation.navigate("Exercise_2")}
-      />
-      <Button
-        color="#a955ee"
-        title="Activity #3"
-        onPress={() => props.navigation.navigate("Exercise_3")}
-      />
+      <Button color="#a955ee" title="Activity #2" />
+      <Button color="#a955ee" title="Activity #3" />
     </View>
   );
 }
@@ -208,16 +162,8 @@ function Apprehensive(props) {
         title="Calming Apprehension"
         onPress={() => props.navigation.navigate("Exercise_1")}
       />
-      <Button
-        color="#a955ee"
-        title="Activity #2"
-        onPress={() => props.navigation.navigate("Exercise_2")}
-      />
-      <Button
-        color="#a955ee"
-        title="Activity #3"
-        onPress={() => props.navigation.navigate("Exercise_3")}
-      />
+      <Button color="#a955ee" title="Activity #2" />
+      <Button color="#a955ee" title="Activity #3" />
     </View>
   );
 }
@@ -228,29 +174,10 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#ffdd66",
   },
-  topContainer: {
-    backgroundColor: "#ffdd88",
-    flex: 3,
-    padding: 5,
-    justifyContent: "flex-end",
-    alignItems: "center",
-    marginBottom: 10,
-  },
-  bottomContainer: {
-    backgroundColor: "#a955ee",
-    flex: 5,
-    justifyContent: "flex-start",
-  },
   topText: {
     color: "white",
     fontSize: 20,
     textAlign: "center",
     padding: 15,
-  },
-  bottomText: {
-    color: "black",
-    textAlign: "center",
-    fontSize: 15,
-    marginTop: 50,
   },
 });
