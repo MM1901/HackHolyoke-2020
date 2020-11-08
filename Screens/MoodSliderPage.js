@@ -20,6 +20,7 @@ export default class MoodSlider extends Component {
   }
 
   render() {
+    const { navigate, state } = this.props.navigation;
     return (
       <ImageBackground
         source={require("../assets/Background.jpg")}
@@ -36,7 +37,7 @@ export default class MoodSlider extends Component {
             <TouchableOpacity
               style={styles.button}
               onPress={() => {
-                alert("you clicked me");
+                navigate("MainMenu", { mood: "Happy" });
               }}
             >
               <Image
@@ -55,7 +56,7 @@ export default class MoodSlider extends Component {
             <TouchableOpacity
               style={styles.button}
               onPress={() => {
-                alert("you clicked me");
+                navigate("MainMenu", { mood: "Dejected" });
               }}
             >
               <Image
@@ -74,7 +75,7 @@ export default class MoodSlider extends Component {
             <TouchableOpacity
               style={styles.button}
               onPress={() => {
-                alert("you clicked me");
+                navigate("MainMenu", { mood: "Serene" });
               }}
             >
               <Image
@@ -93,7 +94,7 @@ export default class MoodSlider extends Component {
             <TouchableOpacity
               style={styles.button}
               onPress={() => {
-                alert("you clicked me");
+                navigate("MainMenu", { mood: "Apprehensive" });
               }}
             >
               <Image
@@ -112,7 +113,7 @@ export default class MoodSlider extends Component {
             <TouchableOpacity
               style={styles.button}
               onPress={() => {
-                alert("you clicked me");
+                navigate("MainMenu", { mood: "Aggrieved" });
               }}
             >
               <Image
