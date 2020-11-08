@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
 
+const bgColor = "#eecc55";
+
 export default StyleSheet.create({
     container: {
         flex: 2,
