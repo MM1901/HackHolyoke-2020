@@ -64,7 +64,7 @@ function display_mood(mood) {
     case "Joyful":
       return (
         <NavigationContainer>
-          <Stack.Navigator>
+          <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="nav" component={Joyful} />
             <Stack.Screen name="Exercise_1" component={Exercise_1} />
           </Stack.Navigator>
@@ -73,7 +73,7 @@ function display_mood(mood) {
     case "Dejected":
       return (
         <NavigationContainer>
-          <Stack.Navigator>
+          <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="nav" component={Dejected} />
             <Stack.Screen name="Exercise_1" component={Exercise_2} />
           </Stack.Navigator>
@@ -82,7 +82,7 @@ function display_mood(mood) {
     case "Serene":
       return (
         <NavigationContainer>
-          <Stack.Navigator>
+          <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="nav" component={Serene} />
             <Stack.Screen name="Exercise_1" component={Exercise_4} />
           </Stack.Navigator>
@@ -91,7 +91,7 @@ function display_mood(mood) {
     case "Aggrieved":
       return (
         <NavigationContainer>
-          <Stack.Navigator>
+          <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="nav" component={Aggrieved} />
             <Stack.Screen name="Exercise_1" component={Exercise_3} />
           </Stack.Navigator>
@@ -100,7 +100,7 @@ function display_mood(mood) {
     case "Apprehensive":
       return (
         <NavigationContainer>
-          <Stack.Navigator>
+          <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="nav" component={Apprehensive} />
             <Stack.Screen name="Exercise_1" component={Exercise_5} />
           </Stack.Navigator>
