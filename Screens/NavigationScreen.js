@@ -39,18 +39,14 @@ export default class NavigationScreen extends React.Component {
     const { state } = this.props.navigation;
     return (
       <View style={styles.containter}>
-        <View style={styles.topContainer}>
-          <Text style={styles.topText}>
-            {" "}
-            {intro_messages[state.params.mood]}{" "}
-          </Text>
-          <Text style={styles.bottomText}>
-            Click an Activity Below to Get Started!
-          </Text>
-        </View>
-        <View style={styles.bottomContainer}>
-          {display_mood(state.params.mood)}
-        </View>
+        <Text style={styles.topText}>
+          {" "}
+          {intro_messages[state.params.mood]}{" "}
+        </Text>
+        <Text style={styles.bottomText}>
+          Click an Activity Below to Get Started!
+        </Text>
+        {display_mood(state.params.mood)}
       </View>
     );
   }
