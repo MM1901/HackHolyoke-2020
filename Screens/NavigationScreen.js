@@ -66,6 +66,8 @@ function display_mood(mood) {
         <NavigationContainer>
           <Stack.Navigator>
             <Stack.Screen name="Suggested Activities" component={Joyful} />
+          <Stack.Navigator screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="nav" component={Joyful} />
             <Stack.Screen name="Exercise_1" component={Exercise_1} />
           </Stack.Navigator>
         </NavigationContainer>
@@ -75,6 +77,8 @@ function display_mood(mood) {
         <NavigationContainer>
           <Stack.Navigator>
             <Stack.Screen name="Suggested Activities" component={Dejected} />
+          <Stack.Navigator screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="nav" component={Dejected} />
             <Stack.Screen name="Exercise_1" component={Exercise_2} />
           </Stack.Navigator>
         </NavigationContainer>
@@ -84,6 +88,8 @@ function display_mood(mood) {
         <NavigationContainer>
           <Stack.Navigator>
             <Stack.Screen name="Suggested Activities" component={Serene} />
+          <Stack.Navigator screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="nav" component={Serene} />
             <Stack.Screen name="Exercise_1" component={Exercise_4} />
           </Stack.Navigator>
         </NavigationContainer>
@@ -93,6 +99,8 @@ function display_mood(mood) {
         <NavigationContainer>
           <Stack.Navigator>
             <Stack.Screen name="Suggested Activities" component={Aggrieved} />
+          <Stack.Navigator screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="nav" component={Aggrieved} />
             <Stack.Screen name="Exercise_1" component={Exercise_3} />
           </Stack.Navigator>
         </NavigationContainer>
@@ -105,6 +113,8 @@ function display_mood(mood) {
               name="Suggested Activities"
               component={Apprehensive}
             />
+          <Stack.Navigator screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="nav" component={Apprehensive} />
             <Stack.Screen name="Exercise_1" component={Exercise_5} />
           </Stack.Navigator>
         </NavigationContainer>

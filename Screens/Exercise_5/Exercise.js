@@ -12,13 +12,11 @@ const Stack = createStackNavigator();
 
 function Exercise_5() {
     return (
-        <NavigationContainer>
-            <Stack.Navigator screenOptions={{ headerShown: false }}>
-                <Stack.Screen name="Page_1" component={Page_1} />
-                <Stack.Screen name="Page_2" component={Page_2} />
-                <Stack.Screen name="Page_3" component={Page_3} />
-            </Stack.Navigator>
-        </NavigationContainer>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="Page_1" component={Page_1} />
+            <Stack.Screen name="Page_2" component={Page_2} />
+            <Stack.Screen name="Page_3" component={Page_3} />
+        </Stack.Navigator>
     )
 }
 

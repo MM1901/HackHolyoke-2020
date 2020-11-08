@@ -6,12 +6,28 @@ import NavigationScreen from "./Screens/NavigationScreen.js";
 
 const AppNavigator = createStackNavigator(
   {
-    Home: HomeScreen,
-    Moods: MoodSliderPage,
-    MainMenu: NavigationScreen,
+    Home: {
+      navigationOptions: {
+        header: null
+      },
+      screen: HomeScreen
+    },
+    Moods: {
+      navigationOptions: {
+        header: null
+      },
+      screen: MoodSliderPage
+    },
+    MainMenu: {
+      navigationOptions: {
+        header: null
+      },
+      screen: NavigationScreen
+    },
   },
   {
     initialRouteName: "Home",
+
   }
 );
 
